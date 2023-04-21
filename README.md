@@ -15,4 +15,3 @@
 ### `Credenciales para iniciar sesion`
 ## `user:admin`
 -- `password:admin`
-//telefono jaz 56 11 25 94 33 
