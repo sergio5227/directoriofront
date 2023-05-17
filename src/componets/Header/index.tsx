@@ -15,12 +15,12 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
 
 
       {!props?.inSession ? <Nav.Item>
-        <Nav.Link disabled={search ==='/login' } href="#/login">Inicio de sesion</Nav.Link>
+        <Nav.Link disabled={search ==='/login' } href="/login">Inicio de sesion</Nav.Link>
       </Nav.Item> : null}
       
 
       {props?.inSession ? <Nav.Item>
-        <Nav.Link disabled={search ==='/dierctorio' } href="#/dierctorio">Directorio</Nav.Link>
+        <Nav.Link disabled={search ==='/dierctorio' } href="/dierctorio">Directorio</Nav.Link>
       </Nav.Item> : null}
 
       {props?.inSession ? <Nav.Item>

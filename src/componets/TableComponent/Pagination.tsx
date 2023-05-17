@@ -13,18 +13,30 @@ const PaginationComponent: React.FC<paginationProps> = (props: paginationProps) 
     }}/>)
   if(active>1){
     for (let number = active-2; number <= active-1; number++) {
-      items.push(
-        <Pagination.Item key={number} active={number === active} onClick={(s)=>{
-          setActive(number)
-          props?.onPage(number)
-          }}>
-          {number}
-        </Pagination.Item>
-      );
+      if(number !== 0){
+        items.push(
+          <Pagination.Item key={number} active={number === active} onClick={(s)=>{
+            setActive(number)
+            props?.onPage(number)
+            }}>
+            {number}
+          </Pagination.Item>
+        );
+      }
     }
   }
+  if(props?.elemenmtos <= 10){
+    
+      
+        items.push(
+          <Pagination.Item key={1} active>
+            {1}
+          </Pagination.Item>
+        );
+      
+  }
   for (let number = active; number <= active+10; number++) {
-    if(number <= props?.elemenmtos){
+    if(number <= props?.elemenmtos && number !== 0){
       items.push(
         <Pagination.Item key={number} active={number === active} onClick={(s)=>{
           setActive(number)
