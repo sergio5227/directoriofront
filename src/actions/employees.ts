@@ -22,7 +22,7 @@ export const removeDetail = () => {
 export const getEmployees = async () => {
   try {
     const response: GeneralHttpResponse = await axios.get(
-      `${"http://127.0.0.1:8000/api/todosElementos"}`
+      `${"http://127.0.0.1:/directorioAPI/api/todosElementos"}`
     );
     return response?.data || [];
   } catch (error) {
@@ -35,7 +35,7 @@ export const getEmployees = async () => {
 export const editEmployee = async (data:any) => {
   try {
     const response: GeneralHttpResponse = await axios.post(
-      `${"http://127.0.0.1:8000/api/actualizaElemento/"}${data?.id}`, data, {
+      `${"http://127.0.0.1/directorioAPI/api/actualizaElemento/"}${data?.id}`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -51,7 +51,7 @@ export const editEmployee = async (data:any) => {
 export const saveEmployee = async (data:any) => {
   try {
     const response: GeneralHttpResponse = await axios.post(
-      `${"http://127.0.0.1:8000/api/altaElemento"}`, data, {
+      `${"http://127.0.0.1:/directorioAPI/api/altaElemento"}`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -68,7 +68,7 @@ export const saveEmployee = async (data:any) => {
 export const elimina = async (id:any) => {
   try {
     const response: GeneralHttpResponse = await axios.post(
-      `${"http://127.0.0.1:8000/api/eliminaElemento/"}${id}`
+      `${"http://127.0.0.1:/directorioAPI/api/eliminaElemento/"}${id}`
     );
     return response?.data || [];
   } catch (error) {
