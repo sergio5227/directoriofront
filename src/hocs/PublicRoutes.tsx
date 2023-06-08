@@ -11,7 +11,7 @@ const PublicRouter: React.FC<PublicRouterProps> = (
   props: PublicRouterProps
 ) => {
   const inSession = useSelector((state:StoreType)=> state?.app?.user?.user || false  )
-  return  !inSession ? <Outlet /> : <Navigate to={'/dierctorio'} />;
+  return  !inSession ? <Outlet /> : <Navigate to={'/directorio'} />;
   
 };
 

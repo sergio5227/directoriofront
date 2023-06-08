@@ -18,7 +18,7 @@ const EmployeesAddPage = () => {
       data1.append("imagen", elemento?.imagen);
       data1.append("nombre", elemento?.nombre);
       data1.append("correo", elemento?.correo);
-      data1.append("extension", elemento?.correo);
+      data1.append("extension", elemento?.extension);
       data1.append("puesto", elemento?.puesto);
       data1.append("sede", elemento?.sede);
       data1.append("ubicacion_piso", elemento?.ubicacion);
@@ -28,7 +28,7 @@ const EmployeesAddPage = () => {
 
       setProcesando(false)
       alert('Registro creado exitosamente')
-      navigate(`/dierctorio`)
+      navigate(`/directorio`)
     } catch (error) {
       alert(error)
       setProcesando(false)

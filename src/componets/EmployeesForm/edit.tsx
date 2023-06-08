@@ -156,7 +156,7 @@ useEffectOnce(() =>  setValues() );
   return (
     <div style={{ width: "100%" }}>
       <FormikProvider value={formik}>
-        <Form.Group className="mb-3 form-control " controlId="formBasicEmail">
+        <Form.Group className="mb-3 form-control " >
           <InputField
             required
             value={nombre}
@@ -265,6 +265,7 @@ useEffectOnce(() =>  setValues() );
               setImagen(target?.files?.[0]);
             }}
             label={"Reemplazar la imagen Imagen*"}
+            accept="image/png, image/gif, image/jpeg"
             placeholder=""
             type="file"
             id="imagen"

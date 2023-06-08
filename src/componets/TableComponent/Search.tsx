@@ -23,11 +23,11 @@ const Search = (props: filterTextProps) => {
       name: "",
     },
     onSubmit: async (values) => {
-      console.log(values);
+      
     },
   });
   return (
-    <div style={{ width: "650px", float: "right", paddingLeft:'15px', paddingBottom:'15px' }}>
+    <div style={{  paddingBottom:'15px' }}>
       <FormikProvider value={formik}>
       
         <Form.Group className="form-control ">

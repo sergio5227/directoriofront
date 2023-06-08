@@ -22,7 +22,7 @@ export const removeDetail = () => {
 export const getEmployees = async () => {
   try {
     const response: GeneralHttpResponse = await axios.get(
-      `${"http://127.0.0.1:/directorioAPI/public/api/todosElementos"}`
+      `${"http://127.0.0.1/directorioAPI/public/api/todosElementos"}`
     );
     return response?.data || [];
   } catch (error) {
@@ -47,6 +47,22 @@ export const editEmployee = async (data:any) => {
     return promise;
   }
 };
+export const storeMasivo = async (data:any) => {
+  try {
+    const response: GeneralHttpResponse = await axios.post(
+      `${"http://127.0.0.1/directorioAPI/public/api/storeMasivo"}`, data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response;
+  } catch (error) {
+    const promise = new Promise((resolve, reject) => reject(error));
+    return promise;
+  }
+};
+
 
 export const saveEmployee = async (data:any) => {
   try {

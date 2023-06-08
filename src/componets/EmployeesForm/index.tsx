@@ -94,7 +94,7 @@ const EmployeesForm: React.FC<EmployeesFormProps> = (
   return (
     <div style={{ width: "100%" }}>
       <FormikProvider value={formik}>
-        <Form.Group className="mb-3 form-control " controlId="formBasicEmail">
+        <Form.Group className="mb-3 form-control " >
           <InputField
             required
             value={nombre}
@@ -205,6 +205,7 @@ const EmployeesForm: React.FC<EmployeesFormProps> = (
             }}
             label={"Imagen*"}
             placeholder=""
+            accept="image/png, image/gif, image/jpeg"
             type="file"
             id="imagen"
           />

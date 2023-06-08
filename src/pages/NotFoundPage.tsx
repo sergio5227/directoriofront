@@ -7,7 +7,7 @@ const NotFoundPage = () => {
   return (
     <div>
       <Header inSession={inSession}/>
-      NotFoundPage
+      Pagina no encontrada
     </div>
   )
 }

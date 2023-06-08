@@ -45,7 +45,7 @@ const LoginForm: React.FC<LoginFormProps> = (props: LoginFormProps) => {
   return (
     <div style={{ width: "100%" }}>
       <FormikProvider value={formik}>
-      <Form.Group className="mb-3 form-control " controlId="formBasicEmail">
+      <Form.Group className="mb-3 form-control " >
 
         <InputField
           required

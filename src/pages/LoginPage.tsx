@@ -21,7 +21,7 @@ const LoginPage = () => {
       const user = await loginHttp(data);
       dispatch(setUser(user));
       setProcesando(false)
-      navigate(`/dierctorio`)
+      navigate(`/directorio`)
     } catch (error) {
       alert(error)
       setProcesando(false)

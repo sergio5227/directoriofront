@@ -29,7 +29,7 @@ const EmployeesEditPage = () => {
       await editEmployee(data1);
       setProcesando(false)
       alert('Registro actualizado exitosamente')
-      navigate(`/dierctorio`)
+      navigate(`/directorio`)
     } catch (error) {
       alert(error)
       setProcesando(false)

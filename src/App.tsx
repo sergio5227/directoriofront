@@ -8,6 +8,7 @@ import EmployeesPage from "./pages/EmployeesPage";
 import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import EmployeesEditPage from "./pages/EmployeesEditPage";
+import AddMultiplePage from "./pages/addMultiplePage";
 
 export default function App() {
 
@@ -18,10 +19,14 @@ export default function App() {
       <Route path="/login" element={<PublicRouter path="/login"  />}>
           <Route path="/login" element={<LoginPage />} />
       </Route> 
+      <Route path="/" element={<PublicRouter path="/login"  />}>
+          <Route path="/login" element={<LoginPage />} />
+      </Route> 
       <Route path="/" element={<PrivateRouter path="/login"  />}>
-        <Route path="/dierctorio" element={<EmployeesPage />} />
-        <Route path="/dierctorio-add" element={<EmployeesAddPage />} />
-        <Route path="/dierctorio-edit" element={<EmployeesEditPage />} />
+        <Route path="/directorio" element={<EmployeesPage />} />
+        <Route path="/directorio-add-multiple" element={<AddMultiplePage />} />
+        <Route path="/directorio-add" element={<EmployeesAddPage />} />
+        <Route path="/directorio-edit" element={<EmployeesEditPage />} />
         </Route>
       <Route path="*" element={<NotFoundPage/>} />
       </Routes>

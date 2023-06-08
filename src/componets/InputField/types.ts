@@ -1,5 +1,6 @@
 export interface InputFieldProps {
     label?: string
+    accept?: string
     id: string
     value?: string
     name: string
